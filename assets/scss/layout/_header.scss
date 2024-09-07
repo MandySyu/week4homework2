@@ -1,0 +1,97 @@
+/* header */
+.header{
+    color: white;
+    padding: 12px;
+
+    @include mobile-larger{
+      padding: 0;
+    }
+
+
+    .logo {
+      width: 80px;
+      height: 48px;
+      @include mobile-larger{
+        margin: 12px;
+      }
+   }
+
+    .nav {
+      font-size: 20px;
+      @include mobile-larger{
+      flex-wrap: wrap;/*讓ul裡的li超過官寬度時，自動往下排列 */
+      width: 100%;/*有加寬度100%  可讓裡面的li比較好置中排列 */
+      }
+    }
+
+    &-wrapper {
+      justify-content: space-between;/*讓 nav的logo和文字各向做右靠齊*/
+      align-items: center;
+      @include mobile-larger{
+        flex-direction: column;/*從原本的左右排列，變上下排列*/
+        align-items: flex-start;/*從交錯軸的起點開始排列*/
+      }
+    }
+
+    .nav-item{
+      @include mobile-larger{
+        text-align: center;/*讓li的文字置中對齊 */
+        padding: 0;
+        width: 50%;/*可讓導覽列呈現兩欄(左右各50%) */
+        border: solid 1px white;
+      }
+
+    }
+
+    .nav-item a { /*導覽列的四個連結內縮8px 32px*/
+      padding: 8px 32px;
+      @include mobile-larger{/*針對a連結做寬度設定  可以讓滑鼠靠近字的周圍就能被按*/     
+          width: 100%;
+          padding: 12px 0;
+      }
+
+    }
+
+  }
+
+
+
+  .ai-center{  //只用在header 就歸在header的樣式裡
+    align-items: center;
+  }
+
+
+
+
+  
+  // @media (max-width: 767px) { 
+  //   .header{
+  //       padding: 0;
+  //     }
+  //   .header .logo {
+  //      margin: 12px;
+  //    }  
+  //   .header-wrapper {/*將div框架的架構設定好*/
+  //       flex-direction: column;/*從原本的左右排列，變上下排列*/
+  //       align-items: flex-start;/*從交錯軸的起點開始排列*/
+  //       }
+
+  //   .header .nav {
+  //       flex-wrap: wrap;/*讓ul裡的li超過官寬度時，自動往下排列 */
+  //       width: 100%;/*有加寬度100%  可讓裡面的li比較好置中排列 */
+  //       }
+
+  //   .header .nav-item {
+  //       text-align: center;/*讓li的文字置中對齊 */
+  //       padding: 0;
+  //       width: 50%;/*可讓導覽列呈現兩欄(左右各50%) */
+  //       border: solid 1px white;
+  //       }
+
+  //   .header .nav-item a { /*針對a連結做寬度設定  可以讓滑鼠靠近字的周圍就能被按*/
+  //       width: 100%;
+  //       padding: 12px 0;
+            
+  //       }
+
+  //  }

@@ -1,0 +1,16 @@
+
+  /* utilities */
+  .d-flex{
+    display: flex;
+  }
+
+
+  .container-sm-full {
+    max-width: 1296px;
+    margin: 0 auto;
+  }
+
+
+  .pr-0{
+    padding-right: 0 !important;/*讓導覽列的常見問題的右邊沒有padding  直接貼齊container*/
+}

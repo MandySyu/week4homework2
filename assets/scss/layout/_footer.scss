@@ -1,0 +1,150 @@
+   /*footer*/
+
+   .footer {
+    /* padding-top: 48px;
+    padding-bottom: 32px; */
+    padding: 48px 12px 32px 12px;
+    color: white;
+    @include mobile-larger{
+      padding: 24px 12px;
+    }
+
+    .nav{
+      font-size: 16px;
+      @include mobile-larger{
+        display: none;
+      }
+    }
+
+    .nav-item a { /*導覽列的5個連結內縮12px 32px*/
+      padding: 12px 32px;
+    }
+
+    .contact-list{
+      font-size: 36px;
+      margin-top: 24px;
+      margin-bottom: 32px;
+      @include mobile-larger{
+        font-size: 16px;
+        margin-top: 0px;
+        margin-bottom: 24px;
+      }
+    }
+
+    .social-list img {
+      width: 48px;
+      @include mobile-larger{
+        width: 24px;
+      }
+
+    }
+
+    .social-list a {
+      padding: 0 16px; /*用padding 可點選到的範圍更大*/
+    }
+
+    .privacy-list {
+      a {
+        padding: 0 24px;
+        @include mobile-larger{
+          padding: 0px 0px;
+         }
+        }
+      @include mobile-larger{
+        flex-direction: column;
+        }
+    }
+
+
+    .mb-8{
+      @include mobile-larger{
+        margin-bottom: 8px;
+      }
+    }
+
+    .contact-list .material-symbols-outlined {
+      font-size: 48px;
+      vertical-align: middle;
+      margin-right: 20px;
+      @include mobile-larger{
+        font-size: 24px;
+        margin-right: 11px;
+      }
+    }
+  }
+
+
+
+
+.style1{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.pl-0 {
+    padding-left: 0 !important;
+  }
+  
+
+.divider{
+    border-bottom: 1px solid #ffffff;
+}
+
+.copyright{
+    justify-content: space-between;
+    padding-top: 32px;
+    font-size: 14px;
+    @include mobile-larger{
+      flex-direction: column;
+      padding-top: 16px;
+      font-size: 16px;
+    }
+}
+
+
+
+
+// @media (max-width: 767px) {
+//     .footer .nav{
+//         display: none;
+//     }
+
+//     .footer .contact-list{
+//         font-size: 16px;
+//         margin-top: 0px;
+//         margin-bottom: 24px;
+//       }
+
+//     .footer .social-list img {
+//         width: 24px;
+//       }
+
+//     .footer .copyright{
+//         flex-direction: column;
+//         padding-top: 16px;
+//         font-size: 16px;
+//     }
+
+//     .privacy-list{
+//         flex-direction: column;
+//     }
+
+//     .footer .privacy-list a{
+//         padding: 0px 0px;
+//     }
+
+//     .footer {
+//         padding: 24px 14px;
+
+//       }
+
+//     .mb-8{
+//         margin-bottom: 8px;
+//     }
+
+//     .footer .contact-list .material-symbols-outlined {
+//       font-size: 24px;
+//       margin-right: 11px;
+//     }
+// }

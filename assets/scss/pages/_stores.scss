@@ -1,0 +1,142 @@
+
+/*baes*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* outline: solid 1px; */
+}
+
+
+/*layout*/
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding-top :96px;
+    padding-bottom: 80px;
+    padding-right:12px;/*去除x軸*/
+    padding-left:12px;/*去除x軸*/
+
+  }
+
+.content-title{
+    border-left: 8px solid #9F1213;
+    font-size: 48px;
+    font-weight: bold;
+    padding-left: 16px;
+    margin-bottom: 33px;
+    @include mobile-larger{
+        font-size: 24px; 
+    }
+}
+
+/*store*/
+.store-search{
+    max-width: 33.33%;
+    display: flex;/*要與下方flex-grow: 1;搭配，搜尋地區的框框才會被拉寬*/
+    align-items: center;
+    @include mobile-larger{
+        max-width: 100%; 
+    }
+}
+
+
+.store-select{
+    font-size: 24px;
+    margin-right: 16px;
+    @include mobile-larger{
+        font-size: 16px;
+    }
+}
+
+.store-select-area{
+  font-size: 18px;
+  flex-grow: 1; /* 讓此區塊填滿剩餘空間 */
+  border-radius: 0px;
+  border: #ced4da 1px solid;
+  color: rgba(85, 85, 85, 0.75);
+  padding: 6px 12px;
+  appearance: none; /*讓原本的相下箭頭不見*/
+  /* position: relative; */
+  background: url(../assets/images/select-arrow.svg);
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: 95% center;/*95%是x軸的位置  center是y軸的位置*/
+
+}
+
+
+.store-list{
+    margin-top: 40px;
+    margin: 40px -12px 80px -12px;  /*左右-12px可除掉card左右邊各內縮12px，讓最邊框可以對齊。最後要到最外框container 去除x軸 */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.card{
+    box-sizing: border-box;
+    width: 33.33%;
+    padding: 0px 12px; /*卡片之間左右的空格*/
+    margin-bottom: 48px;
+    @include mobile-larger{
+        width: 100%;
+    }
+    img{
+        vertical-align: middle; //可消除圖片下方2-3px的空白
+    }
+
+    &-body{
+        padding: 8px 0px;
+        display: flex;
+        flex-direction: column;
+        /* height: 100%; */
+        font-size: 20px;
+        border: 1px solid #00000020;
+    }
+
+    &-btn{
+        background: #000;
+        color: white;
+        padding: 16px 0px;
+        font-size: 19px;
+        width: 100%;
+        text-align: center;
+    }
+
+    &-title{
+        font-size: 24px;
+        border-bottom: 1px solid #00000020;
+        padding: 0px 20px 8px 24px;
+    }
+
+    &-list{
+        padding: 16px 24px;
+    }
+
+    &-list li{
+        display: flex;
+        align-items: flex-start;
+     }
+
+     .mr-10{
+        margin-right: 10px ;
+        margin-bottom: 8px;
+    }
+}
+
+
+
+
+
+// @media (max-width: 767px) { 
+
+//     .card{
+//         width: 100%;
+//     }
+
+//     .store-search{
+//         max-width: 100%;
+//     }
+
+// }
